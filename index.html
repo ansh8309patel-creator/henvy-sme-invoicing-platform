@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InvoicePro Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <h1>InvoicePro</h1>
+
+  <ul>
+    <li><a href="#">Dashboard</a></li>
+    <li><a href="#">Invoices</a></li>
+    <li><a href="#">Clients</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+
+  <div class="hero-text">
+    <h2>Manage Your Business Easily</h2>
+
+    <p>
+      Create invoices, track payments and manage clients
+      from one simple dashboard.
+    </p>
+
+    <button>Create Invoice</button>
+  </div>
+
+</section>
+
+<!-- Invoice Form -->
+<section class="invoice-section">
+
+  <h2>Create Invoice</h2>
+
+  <div class="invoice-form">
+
+    <input type="text" id="clientName" placeholder="Client Name">
+
+    <input type="number" id="amount" placeholder="Invoice Amount">
+
+    <input type="date" id="dueDate">
+
+    <select id="status">
+      <option>Pending</option>
+      <option>Paid</option>
+      <option>Overdue</option>
+    </select>
+
+    <button onclick="addInvoice()">Add Invoice</button>
+
+  </div>
+
+</section>
+
+<!-- Invoice Table -->
+<section class="table-section">
+
+  <h2>Invoices List</h2>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Client</th>
+        <th>Amount</th>
+        <th>Due Date</th>
+        <th>Status</th>
+        <th>Reminder</th>
+      </tr>
+    </thead>
+
+    <tbody id="invoiceTable">
+
+    </tbody>
+
+  </table>
+
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 InvoicePro</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
